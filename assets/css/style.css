@@ -1,0 +1,17 @@
+.jumbotron {
+    margin-left: 10%;
+    margin-right: 10%;
+    
+}
+
+h1 {
+    font-family: "EB Garamond";
+    font-weight: bold;
+    font-size: 50px;
+    text-align: center;
+}
+
+#form {
+    margin-left: 50%;
+}
+
