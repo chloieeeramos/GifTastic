@@ -1,13 +1,13 @@
 $(document).ready(function(){
 
-    var topics = ["Daenerys Targaryen", "Cersei Lannister", "Jon Snow"];
-
+    var displayedButtons = ["Daenerys Targaryen", "Cersei Lannister", "Jon Snow", "Arya Stark"];
+    
     function displayImg(){
 
         $("#display-images").empty();
         var input = $(this).attr("data-name");
         var limit = 10;
-        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + input + "&limit=" + limit + "&api_key=NfeWZu8r1kWaUGzGUa9Z0SdiTSBP1lix";   
+        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + input + "&limit=" + limit + "&api_key=dc6zaTOxFJmzC";   
 
         $.ajax({
             url: queryURL, 
@@ -39,16 +39,16 @@ $(document).ready(function(){
 
     function renderButtons(){ 
 
-        $("#topics").empty();
+        $("#display-buttons").empty();
 
-        for (var i = 0; i < topics.length; i++){
+        for (var i = 0; i < displayedButtons.length; i++){
 
             var newButton = $("<button>") 
             newButton.attr("class", "btn btn-default");
             newButton.attr("id", "input")  
-            newButton.attr("data-name", topics[i]); 
-            newButton.text(topics[i]); 
-            $("#topics").append(newButton); 
+            newButton.attr("data-name", displayedButtons[i]); 
+            newButton.text(displayedButtons[i]); 
+            $("#display-buttons").append(newButton); 
         }
     }
 
@@ -73,7 +73,7 @@ $(document).ready(function(){
 
         var input = $("#user-input").val().trim();
         form.reset();
-        topics.push(input);
+        displayedButtons.push(input);
                 
         renderButtons();
 
