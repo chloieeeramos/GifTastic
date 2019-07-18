@@ -1,6 +1,7 @@
 body {
     background-image: url("../images/got.jpg");
     background-size: cover;
+    font-family: "EB Garamond";
 }
 
 img {
@@ -9,13 +10,15 @@ img {
 }
 
 label {
-    color: #fff;
+    color: white;
 }
 
 .jumbotron {
     text-align: center;
     margin-left: 10%;
     margin-right: 10%;
+    opacity: 0.7;
+    background-color: gray;
 }
 
 h1 {
@@ -25,3 +28,13 @@ h1 {
     text-align: center;
 }
 
+#input {
+    background-color: gray;
+    margin: 5px;
+    color: white;
+    font-family: "EB Garamond";
+}
+
+.holder {
+    color: white;
+}
